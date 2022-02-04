@@ -1,0 +1,99 @@
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "car_app_w21_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "car_app_w21_test" ENCODING = 'unicode'[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (34.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "car_app_w21_development"[0m
+  [1m[35m (20.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "car_app_w21_test"[0m
+  [1m[35m (78.3ms)[0m  [1m[35mCREATE DATABASE "car_app_w21_development" ENCODING = 'unicode'[0m
+  [1m[35m (28.2ms)[0m  [1m[35mCREATE DATABASE "car_app_w21_test" ENCODING = 'unicode'[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4842307467137871360)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCars (20211116194010)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "cars" ("id" bigserial primary key, "make" character varying, "price" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211116194010"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-17 00:33:31.823829"], ["updated_at", "2021-11-17 00:33:31.823829"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4842307467137871360)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-11-16 15:33:50 -0900
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#home as HTML
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/michaelknutson/Desktop/dpl_winter_2021/week2/car_app_w21/public/packs
+[Webpacker] Hash: d71bdd3fc7e6c420e203
+Version: webpack 4.46.0
+Time: 1893ms
+Built at: 11/16/2021 3:33:53 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-d8ae2bd54d5f77d20b7b.js  1.35 MiB       application  [emitted] [immutable]  application
+     js/application-d8ae2bd54d5f77d20b7b.js.map  1.54 MiB       application  [emitted] [dev]        application
+         js/hello_react-6a71d36e7a9f65f7abe4.js  1.09 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-6a71d36e7a9f65f7abe4.js.map  1.26 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-742489befe4c4248d2be.js  1.23 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-742489befe4c4248d2be.js.map  1.41 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-d8ae2bd54d5f77d20b7b.js js/application-d8ae2bd54d5f77d20b7b.js.map
+Entrypoint hello_react = js/hello_react-6a71d36e7a9f65f7abe4.js js/hello_react-6a71d36e7a9f65f7abe4.js.map
+Entrypoint server_rendering = js/server_rendering-742489befe4c4248d2be.js js/server_rendering-742489befe4c4248d2be.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 297 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 710 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.09 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendering layout layouts/application.html.erb
+  Rendering inline template within layouts/application
+  Rendered inline template within layouts/application (Duration: 0.3ms | Allocations: 208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 20324)
+Completed 200 OK in 3150ms (Views: 3144.5ms | ActiveRecord: 0.0ms | Allocations: 42693)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (1.2ms)[0m  [1m[32mINSERT INTO "cars" ("make", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["make", "Ford"], ["price", 1000.0], ["created_at", "2021-11-17 00:35:41.469458"], ["updated_at", "2021-11-17 00:35:41.469458"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.4ms)[0m  [1m[32mINSERT INTO "cars" ("make", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["make", "Tesla"], ["price", 10000.0], ["created_at", "2021-11-17 00:35:41.473071"], ["updated_at", "2021-11-17 00:35:41.473071"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY "cars"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY "cars"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/index" for ::1 at 2021-11-16 15:35:50 -0900
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/" for ::1 at 2021-11-16 15:35:59 -0900
+Processing by StaticController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inline template within layouts/application
+  Rendered inline template within layouts/application (Duration: 0.4ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 5446)
+Completed 200 OK in 135ms (Views: 134.1ms | ActiveRecord: 0.0ms | Allocations: 6276)
+
+
+Started GET "/cars" for ::1 at 2021-11-16 15:36:25 -0900
+Processing by CarsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inline template within layouts/application
+  Rendered inline template within layouts/application (Duration: 0.3ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 5546)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.0ms | Allocations: 7464)
+
+
